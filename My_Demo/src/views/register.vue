@@ -8,19 +8,19 @@
       >
         <div class="row">
           <label class="flex flex-col" for="fullName">
-            <span class="font-semibold">Full Name</span>
+            <span class="font-semibold text-gray-700">Full Name</span>
             <input
               id="fullName"
               class="px-4 py-3 rounded-lg border border-gray-100 mt-1"
               type="text"
-              placeholder="iMoney..."
+              placeholder="Enter your full name here"
               v-model="fullName"
             />
           </label>
         </div>
         <div class="row">
           <label class="flex flex-col" for="email">
-            <span class="font-semibold">Email Address</span>
+            <span class="font-semibold text-gray-700">Email Address</span>
             <input
               id="email"
               class="px-4 py-3 rounded-lg border border-gray-100 mt-1"
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
           <label class="flex flex-col" for="password">
-            <span class="font-semibold">Password</span>
+            <span class="font-semibold text-gray-700">Password</span>
             <input
               id="password"
               class="px-4 py-3 rounded-lg border border-gray-100 mt-1"
@@ -45,35 +45,18 @@
         <div class="row">
           <button
             v-if="!isPending"
-            class="
-              py-3
-              text-center
-              w-full
-              bg-primary
-              text-white
-              font-bold
-              rounded-lg
-            "
+            class="py-3 text-center w-full bg-gray-700 text-white font-bold rounded-lg"
             type="submit"
           >
             Sign Up
           </button>
           <button
             v-else
-            class="
-              py-3
-              text-center
-              w-full
-              bg-gray-800
-              text-white
-              font-bold
-              rounded-lg
-              cursor-not-allowed
-            "
+            class="py-3 text-center w-full bg-gray-500 text-white font-bold rounded-lg cursor-not-allowed"
             type="button"
             disabled
           >
-            Loading...
+            Sign Up...
           </button>
         </div>
       </form>
@@ -85,11 +68,10 @@
 
       <!-- Start direction -->
       <div class="w-full text-center mt-6">
-        <span class="font-semibold">I'm ready a member.</span>
         <span class="ml-1"
           ><router-link
             :to="{ name: 'Login', params: {} }"
-            class="text-primary font-bold"
+            class="text-gray-700 font-bold"
             >Sign In</router-link
           ></span
         >
