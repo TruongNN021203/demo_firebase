@@ -23,6 +23,7 @@ async function signUp(email, password, fullName) {
     error.value = err.message;
   } finally {
     isPending.value = false;
+    error.value = null;
   }
 }
 

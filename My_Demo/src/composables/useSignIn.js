@@ -19,6 +19,7 @@ async function signIn(email, password) {
     error.value = err.message;
   } finally {
     isPending.value = false;
+    error.value = null;
   }
 }
 export function useSignIn() {

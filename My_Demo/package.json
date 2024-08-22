@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "firebase:deploy": "firebase deploy --project mydemo-c64be --only hosting:mydemo-c64be",
+    "deploy":"npm run build && npm run firebase:deploy",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
